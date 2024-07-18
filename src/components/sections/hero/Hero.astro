@@ -1,0 +1,43 @@
+---
+import { LinesCanvas } from "../../composites/lines-canvas/LinesCanvas";
+import AnimatedBoxLink from "../../primitives/animated-box-link/AnimatedBoxLink.astro";
+import { Text } from "../../primitives/text/Text";
+import { Github, Linkedin } from "lucide-preact";
+---
+
+<section
+  id="hero"
+  class="relative mt-[4.125rem] flex h-[calc(100vh-4.125rem)] w-full flex-col items-center justify-center"
+>
+  <Text element="h1" variant="gradient" className="mb-1 text-6xl font-bold">
+    Vladimir Infante
+  </Text>
+  <Text element="h2" variant="base" className="mb-2 text-3xl font-semibold">
+    FullStack Developer
+  </Text>
+  <Text
+    element="p"
+    variant="base"
+    className="mb-5 text-lg font-semibold text-gray-200"
+  >
+    I build great digital experiences using modern technologies
+  </Text>
+  <div class="flex gap-x-6">
+    <AnimatedBoxLink
+      title="Go to Github"
+      label="Checkout the github page for more information"
+      link="https://github.com/InfVlad"
+    >
+      <Github class="h-6 w-6" />
+    </AnimatedBoxLink>
+    <AnimatedBoxLink
+      title="Go to Linkedin"
+      label="Checkout the linkedin profile for more information"
+      link="https://www.linkedin.com/in/vladimir-infante-347058263/"
+    >
+      <Linkedin class="h-5 w-5" />
+    </AnimatedBoxLink>
+  </div>
+
+  <LinesCanvas client:load />
+</section>;
