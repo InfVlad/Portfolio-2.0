@@ -16,6 +16,7 @@
     "@astrojs/preact": "^3.5.1",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.11.6",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-preact": "^0.408.0",
     "preact": "^10.22.1",
