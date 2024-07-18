@@ -16,7 +16,10 @@
     "@astrojs/preact": "^3.5.1",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.11.6",
-    "preact": "^10.22.1"
+    "clsx": "^2.1.1",
+    "lucide-preact": "^0.408.0",
+    "preact": "^10.22.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.16.1",
