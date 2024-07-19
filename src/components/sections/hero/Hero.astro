@@ -1,14 +1,15 @@
 ---
-import { LinesCanvas } from "../../composites/lines-canvas/LinesCanvas";
-import AnimatedBoxLink from "../../primitives/animated-box-link/AnimatedBoxLink.astro";
-import { Text } from "../../primitives/text/Text";
 import { Github, Linkedin } from "lucide-preact";
+import { LinesCanvas } from "~/components/composites/lines-canvas/LinesCanvas";
+import { AnimatedButtonContainer } from "~/components/composites/animated-button-container/AnimatedButtonContainer";
+import { AnimatedBoxLink, PulsatingDot, Text } from "~/components/primitives";
 ---
 
 <section
   id="hero"
-  class="relative mt-[4.125rem] flex h-[calc(100vh-4.125rem)] w-full flex-col items-center justify-center"
+  class="relative mt-[4.125rem] flex h-[calc(100vh-4.125rem)] w-full flex-col items-center justify-center border-b border-b-bline"
 >
+  <LinesCanvas client:load />
   <Text element="h1" variant="gradient" className="mb-1 text-6xl font-bold">
     Vladimir Infante
   </Text>
@@ -22,6 +23,10 @@ import { Github, Linkedin } from "lucide-preact";
   >
     I build great digital experiences using modern technologies
   </Text>
+  <AnimatedButtonContainer>
+    <PulsatingDot />
+    Let's Connect
+  </AnimatedButtonContainer>
   <div class="flex gap-x-6">
     <AnimatedBoxLink
       title="Go to Github"
@@ -38,6 +43,4 @@ import { Github, Linkedin } from "lucide-preact";
       <Linkedin class="h-5 w-5" />
     </AnimatedBoxLink>
   </div>
-
-  <LinesCanvas client:load />
 </section>;
