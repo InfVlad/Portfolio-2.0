@@ -9,6 +9,7 @@ export default {
         "primary-blue": "#17d1f1",
         "secondary-blue": "#18A0FB",
         bline: "rgb(50 50 40)",
+        card: "#191917",
       },
       dropShadow: {
         dark: "0 -10px 20px rgb(23, 209, 241,0.3)",
