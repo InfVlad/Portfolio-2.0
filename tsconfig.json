@@ -3,12 +3,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@data/*": ["src/data/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@types/*": ["src/types/*"],
-      "@utils/*": ["src/utils/*"]
+      "~/assets/*": ["src/assets/*"],
+      "~/components/*": ["src/components/*"],
+      "~/data/*": ["src/data/*"],
+      "~/hooks/*": ["src/hooks/*"],
+      "~/layouts/*": ["src/layouts/*"],
+      "~/types/*": ["src/types/*"],
+      "~/utils/*": ["src/utils/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
