@@ -6,6 +6,9 @@ export const LinesCanvas = () => {
     renderCanvas();
   }, []);
   return (
-    <canvas class="pointer-events-none absolute inset-1 -z-50" id="canvas" />
+    <canvas
+      class="pointer-events-none absolute inset-1 -z-50 -translate-y-[4.375rem]"
+      id="canvas"
+    />
   );
 };
