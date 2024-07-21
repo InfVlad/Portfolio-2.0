@@ -1,0 +1,8 @@
+---
+import SectionLayout from "~/layouts/SectionLayout.astro";
+import { ProjectRowsContainer } from "~/components/composites/project-rows-container/ProjectRowsContainer";
+---
+
+<SectionLayout title="My Projects" link="#" withMargin={false}>
+  <ProjectRowsContainer client:visible />
+</SectionLayout>

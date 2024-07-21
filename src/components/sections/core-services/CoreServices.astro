@@ -1,0 +1,15 @@
+---
+import { CoreServiceCard } from "~/components/composites/core-service-card/CoreServiceCard";
+import { services } from "~/data/coreServices";
+import SectionLayout from "~/layouts/SectionLayout.astro";
+---
+
+<SectionLayout title="What I Do" link="#" linkText="About Me">
+  <section class="flex flex-wrap gap-4">
+    {
+      services.map((service, index) => (
+        <CoreServiceCard {...service} index={index} />
+      ))
+    }
+  </section>
+</SectionLayout>
