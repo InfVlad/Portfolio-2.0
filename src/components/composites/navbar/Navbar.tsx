@@ -1,6 +1,7 @@
 import { House, Briefcase, User, Mail } from "lucide-preact";
-import { useHideOnScroll } from "@hooks/useHideOnScroll";
-import { cn } from "@utils/cn";
+import { useHideOnScroll } from "~/hooks/useHideOnScroll";
+import { cn } from "~/utils/cn";
+import { AnimatedButtonContainer } from "../animated-button-container/AnimatedButtonContainer";
 
 export const Navbar = () => {
   const isScrollingUp = useHideOnScroll();
@@ -8,7 +9,7 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed left-0 top-0 z-50 w-full bg-primary-bg transition-all duration-300 ease-in-out",
+        "fixed left-0 top-0 z-50 w-full border-b border-b-bline bg-primary-bg transition-all duration-500 ease-in-out",
         isScrollingUp === "up" && "drop-shadow-dark",
         isScrollingUp === "down" && "-translate-y-full",
       )}
@@ -21,24 +22,23 @@ export const Navbar = () => {
         </div>
         <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 text-white">
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <House className="size-[0.625rem]" />
+            <House className="size-2" />
             Home
           </li>
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <Briefcase className="size-[0.625rem]" />
+            <Briefcase className="size-2" />
             Projects
           </li>
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <User className="size-[0.625rem]" />
+            <User className="size-2" />
             About
           </li>
         </ul>
-        <a
-          href="http://_"
-          className="flex h-[3.125rem] items-center gap-x-3 rounded-3xl border border-bline px-4 text-white hover:text-secondary-blue"
-        >
-          <Mail className="size-[0.625rem]" />
-          Contact
+        <a href="#" className="h-[3.125rem] w-fit rounded-3xl">
+          <AnimatedButtonContainer className="mb-0">
+            <Mail className="size-2" />
+            Contact
+          </AnimatedButtonContainer>
         </a>
       </div>
     </header>
