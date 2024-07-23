@@ -33,7 +33,13 @@ export const SkillsSlider = () => {
             }}
             title={title}
           >
-            <img src={image} alt={title} />
+            <img
+              src={image}
+              alt={title}
+              height={80}
+              width={80}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
