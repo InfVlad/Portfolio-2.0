@@ -1,0 +1,46 @@
+import type { InputData } from "./types";
+
+export const inputsData: InputData[] = [
+  {
+    id: "1",
+    name: "name",
+    label: "Name",
+    type: "text",
+    placeholder: "Enter your name...",
+    errorMessage: "Your name should be 3-30 characters",
+    pattern: "^[.*]{3,30}$",
+    required: true,
+  },
+  {
+    id: "2",
+    name: "email",
+    type: "email",
+    placeholder: "Enter your email...",
+    errorMessage: "It should be a valid email address!",
+    label: "Email",
+    pattern: "/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$/i",
+    required: true,
+  },
+  {
+    id: "3",
+    name: "subject",
+    type: "text",
+    placeholder: "Enter your subject...",
+    errorMessage: "The subject should be at least 3 characters",
+    label: "Subject",
+    pattern: "^[.*]{3,50}$",
+    required: true,
+  },
+  {
+    id: "4",
+    name: "message",
+    type: "text",
+    placeholder: "Enter your subject...",
+    errorMessage: "The message should be at least 5 characters",
+    label: "Message",
+    pattern: "^[.*]{5,200}$",
+    required: true,
+    isLast: true,
+    isTextArea: true,
+  },
+];
