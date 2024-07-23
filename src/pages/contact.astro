@@ -1,0 +1,11 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { ContactForm } from "~/components/composites/contact-form/ContactForm";
+---
+
+<Layout title="Contact me">
+  <main class="h-[200vh] w-full pt-32">
+    <ContactForm client:visible />
+    <div class="h-screen"></div>
+  </main>
+</Layout>

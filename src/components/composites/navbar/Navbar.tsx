@@ -16,7 +16,7 @@ export const Navbar = () => {
     >
       <div className="container flex w-[95%] items-center justify-between py-2">
         <div className="w-[7.8125rem]">
-          <a href="">
+          <a href="/">
             <img src="/favicon.svg" alt="site's icon" />
           </a>
         </div>
@@ -34,7 +34,7 @@ export const Navbar = () => {
             About
           </li>
         </ul>
-        <a href="#" className="h-[3.125rem] w-fit rounded-3xl">
+        <a href="/contact" className="h-[3.125rem] w-fit rounded-3xl">
           <AnimatedButtonContainer className="mb-0">
             <Mail className="size-2" />
             Contact
