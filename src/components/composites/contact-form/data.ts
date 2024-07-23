@@ -8,7 +8,7 @@ export const inputsData: InputData[] = [
     type: "text",
     placeholder: "Enter your name...",
     errorMessage: "Your name should be 3-30 characters",
-    pattern: "^[.*]{3,30}$",
+    pattern: ".{3,30}",
     required: true,
   },
   {
@@ -28,7 +28,7 @@ export const inputsData: InputData[] = [
     placeholder: "Enter your subject...",
     errorMessage: "The subject should be at least 3 characters",
     label: "Subject",
-    pattern: "^[.*]{3,50}$",
+    pattern: ".{3,50}",
     required: true,
   },
   {
@@ -38,7 +38,7 @@ export const inputsData: InputData[] = [
     placeholder: "Enter your subject...",
     errorMessage: "The message should be at least 5 characters",
     label: "Message",
-    pattern: "^[.*]{5,200}$",
+    pattern: ".{5,250}",
     required: true,
     isLast: true,
     isTextArea: true,

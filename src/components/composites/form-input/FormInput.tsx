@@ -24,7 +24,7 @@ export const FormInput = ({
     setFocused(true);
   };
   return (
-    <div className="flex flex-col">
+    <div className="mb-4 flex flex-col">
       <label htmlFor={name} className="mb-4 text-lg font-bold text-white">
         {label}
       </label>
