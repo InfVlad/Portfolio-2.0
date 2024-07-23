@@ -22,21 +22,21 @@ export const Navbar = () => {
         </div>
         <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 text-white">
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <House className="size-2" />
+            <House size={20} />
             Home
           </li>
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <Briefcase className="size-2" />
+            <Briefcase size={20} />
             Projects
           </li>
           <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
-            <User className="size-2" />
+            <User size={20} />
             About
           </li>
         </ul>
         <a href="/contact" className="h-[3.125rem] w-fit rounded-3xl">
           <AnimatedButtonContainer className="mb-0">
-            <Mail className="size-2" />
+            <Mail size={20} />
             Contact
           </AnimatedButtonContainer>
         </a>
