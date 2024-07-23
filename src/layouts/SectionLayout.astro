@@ -2,7 +2,6 @@
 import { Text } from "~/components/primitives";
 import { AnimatedButtonContainer } from "~/components/composites/animated-button-container/AnimatedButtonContainer";
 import { ArrowRight } from "lucide-preact";
-import { cn } from "~/utils/cn";
 
 interface Props {
   title: string;
@@ -19,7 +18,9 @@ const { title, link, linkText, withMargin = true } = Astro.props;
     className="autoShow mb-10 text-3xl font-semibold text-primary-lila"
     >{title}</Text
   >
-  <div class={cn("autoShow relative h-0.5 bg-bline", withMargin && "mb-20")}>
+  <div
+    class:list={[`autoShow relative h-0.5 bg-bline`, { "mb-20": withMargin }]}
+  >
     {
       linkText && (
         <a
