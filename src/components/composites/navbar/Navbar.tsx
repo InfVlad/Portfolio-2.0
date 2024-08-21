@@ -17,7 +17,7 @@ export const Navbar = () => {
       <div className="container flex w-[95%] items-center justify-between py-2">
         <div className="w-[7.8125rem]">
           <a href="/">
-            <img src="/favicon.svg" alt="site's icon" />
+            <img src="/favicon.svg" alt="site's icon" height={25} width={47} />
           </a>
         </div>
         <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 text-white">
