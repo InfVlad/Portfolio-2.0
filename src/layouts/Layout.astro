@@ -47,7 +47,11 @@ const { title } = Astro.props;
   .autoShowRight {
     animation: autoAnimateShowRight both;
     animation-timeline: view(var(--viewEnd, 50%) var(--viewStart, 20%));
-    animation-delay: var(--delay,0s);
+    animation-delay: var(--delay, 0s);
+  }
+  .autoShowRightWithoutTimeline {
+    animation: autoAnimateShowRight 0.3s ease forwards;
+    animation-delay: var(--delay, 0s);
   }
 
   .slider {
