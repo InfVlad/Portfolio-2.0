@@ -11,7 +11,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
     description: "Interactive workShop management system",
   },
   {
-    slug: "garage-guest",
+    slug: "garage-guest2",
     rol: "FullStack Development",
     technologies: "NextJs, Typescript, Postgresql, Prisma",
     title: "Garage Guest",
@@ -20,7 +20,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
     description: "Interactive workShop management system",
   },
   {
-    slug: "garage-guest",
+    slug: "garage-guest3",
     rol: "FullStack Development",
     technologies: "NextJs, Typescript, Postgresql, Prisma",
     title: "Garage Guest",
@@ -29,7 +29,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
     description: "Interactive workShop management system",
   },
   {
-    slug: "garage-guest",
+    slug: "garage-guest4",
     rol: "FullStack Development",
     technologies: "NextJs, Typescript, Postgresql, Prisma",
     title: "Garage Guest",
@@ -38,7 +38,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
     description: "Interactive workShop management system",
   },
   {
-    slug: "garage-guest",
+    slug: "garage-gues5",
     rol: "FullStack Development",
     technologies: "NextJs, Typescript, Postgresql, Prisma",
     title: "Garage Guest",
