@@ -5,7 +5,7 @@ import { skillsList } from "~/data/skillsList";
 
 export const SkillsSlider = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useIntersection(ref, "0px 0px -200px 0px");
+  const isVisible = useIntersection(ref, "0px 0px -15% 0px");
   const numberOfElements = skillsList.length;
   const translateZ = useAnimatedValue(150, 350, 400, isVisible);
 
