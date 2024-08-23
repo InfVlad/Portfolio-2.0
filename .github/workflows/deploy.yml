@@ -23,7 +23,10 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            export PATH=$PATH:/home/${{ secrets.USERNAME }}/.bun/bin/bun
+            echo "Current PATH: $PATH"
+            export PATH=$PATH:/home/${{ secrets.USERNAME }}/.bun/bin
+            echo "Updated PATH: $PATH"
+            source ~/.bashrc
             cd /var/www/portfolio.vladinfante.com/src/
             git pull origin main
             bun install
