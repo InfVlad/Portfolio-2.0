@@ -25,9 +25,6 @@ jobs:
           script: |
             cd /var/www/portfolio.vladinfante.com/src/
             git pull origin main
-          # Bun is faster than node for building, and also saves disk space
-          # Thats why i use it here:
             bun install
             bun run build
-          # The served files are outside:
             cp -r dist/. ../dist/
