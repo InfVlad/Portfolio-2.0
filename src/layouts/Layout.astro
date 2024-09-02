@@ -172,4 +172,15 @@ const { title } = Astro.props;
   .animate-ping {
     animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
+  .draw-animation {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100;
+    animation: draw 0.6s forwards;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 </style>
