@@ -2,6 +2,7 @@ import { House, Briefcase, User, Mail } from "lucide-preact";
 import { useHideOnScroll } from "~/hooks/useHideOnScroll";
 import { cn } from "~/utils/cn";
 import { AnimatedButtonContainer } from "../animated-button-container/AnimatedButtonContainer";
+import { NavbarLink } from "./NavbarLink";
 
 export const Navbar = () => {
   const isScrollingUp = useHideOnScroll();
@@ -14,25 +15,25 @@ export const Navbar = () => {
         isScrollingUp === "down" && "-translate-y-full",
       )}
     >
-      <div className="container flex w-[95%] items-center justify-between py-2">
+      <nav className="container flex w-[95%] items-center justify-between py-2">
         <div className="w-[7.8125rem]">
           <a href="/">
             <img src="/favicon.svg" alt="site's icon" height={25} width={47} />
           </a>
         </div>
-        <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 text-white">
-          <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
+        <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 font-semibold text-white">
+          <NavbarLink href="/">
             <House size={20} />
             Home
-          </li>
-          <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
+          </NavbarLink>
+          <NavbarLink href="/projects">
             <Briefcase size={20} />
             Projects
-          </li>
-          <li className="flex h-[inherit] cursor-pointer items-center gap-x-2 transition-all duration-300 ease-in-out hover:scale-125 hover:px-3 hover:text-secondary-blue">
+          </NavbarLink>
+          <NavbarLink href="/about">
             <User size={20} />
             About
-          </li>
+          </NavbarLink>
         </ul>
         <a href="/contact" className="h-[3.125rem] w-fit rounded-3xl">
           <AnimatedButtonContainer className="mb-0">
@@ -40,7 +41,7 @@ export const Navbar = () => {
             Contact
           </AnimatedButtonContainer>
         </a>
-      </div>
+      </nav>
     </header>
   );
 };
