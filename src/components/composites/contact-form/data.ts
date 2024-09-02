@@ -7,8 +7,8 @@ export const inputsData: InputData[] = [
     label: "Name",
     type: "text",
     placeholder: "Enter your name...",
-    errorMessage: "Your name should be 3-30 characters",
-    pattern: ".{3,30}",
+    errorMessage: "Please enter your name",
+    pattern: ".{2,60}",
     required: true,
   },
   {
@@ -18,7 +18,7 @@ export const inputsData: InputData[] = [
     placeholder: "Enter your email...",
     errorMessage: "It should be a valid email address!",
     label: "Email",
-    pattern: "/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$/i",
+    pattern: "^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$",
     required: true,
   },
   {
