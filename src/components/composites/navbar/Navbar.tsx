@@ -36,7 +36,7 @@ export const Navbar = () => {
           </NavbarLink>
         </ul>
         <a href="/contact" className="h-[3.125rem] w-fit rounded-3xl">
-          <AnimatedButtonContainer className="mb-0">
+          <AnimatedButtonContainer isLink={false} className="mb-0">
             <Mail size={20} />
             Contact
           </AnimatedButtonContainer>

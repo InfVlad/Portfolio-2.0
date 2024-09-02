@@ -52,7 +52,7 @@ export const ContactForm = () => {
         ))}
       </fieldset>
       <button type="submit">
-        <AnimatedButtonContainer className="px-12">
+        <AnimatedButtonContainer isLink={false} className="px-12">
           Submit
         </AnimatedButtonContainer>
       </button>
