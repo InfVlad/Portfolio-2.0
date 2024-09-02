@@ -23,15 +23,12 @@ const { title, link, linkText, withMargin = true } = Astro.props;
   >
     {
       linkText && (
-        <a
-          href={link}
-          class="absolute right-0 h-[3.125rem] w-fit -translate-x-1/2 -translate-y-1/2"
-        >
-          <AnimatedButtonContainer>
+        <div class="absolute right-0 h-[3.125rem] w-fit -translate-x-1/2 -translate-y-1/2">
+          <AnimatedButtonContainer isLink href={link}>
             {linkText}
             <ArrowRight size={24} />
           </AnimatedButtonContainer>
-        </a>
+        </div>
       )
     }
   </div>
