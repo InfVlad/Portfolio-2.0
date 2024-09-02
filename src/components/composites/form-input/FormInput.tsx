@@ -17,7 +17,7 @@ export const FormInput = ({
   errorMessage,
   isLast,
   onChange,
-  ...rest
+  ...inputProps
 }: Props) => {
   const [focused, setFocused] = useState(false);
   const handleFocus = (e: JSX.TargetedFocusEvent<HTMLInputElement>) => {
@@ -33,7 +33,7 @@ export const FormInput = ({
         onBlur={handleFocus}
         onFocus={() => isLast && setFocused(true)}
         onChange={onChange}
-        {...rest}
+        {...inputProps}
         data-focused={focused.toString()}
         className="peer"
       />
