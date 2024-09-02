@@ -1,0 +1,35 @@
+---
+import { Text } from "../../primitives";
+import { CopyButton } from "../copy-button/CopyButton";
+import { EMAIL, GITHUB, LINKEDIN } from "~/data/socialsLinks";
+---
+
+<section class="space-y-10">
+  <div class="flex w-full justify-center">
+    <img src="/favicon.svg" alt="site's icon" height={75} width={141} />
+  </div>
+  <div>
+    <div class="mb-5">
+      <Text className="mb-3 text-2xl font-semibold">Contact information</Text>
+      <div class="flex items-center gap-x-4">
+        <Text className="text-lg">{EMAIL} </Text>
+        <CopyButton textToCopy={EMAIL} client:visible />
+      </div>
+    </div>
+    <div>
+      <Text className="mb-3 text-2xl font-semibold">Socials</Text>
+      <div class="space-y-2">
+        <Text className="text-lg">
+          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </Text>
+        <Text className="text-lg">
+          <a href={GITHUB} target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
+        </Text>
+      </div>
+    </div>
+  </div>
+</section>
