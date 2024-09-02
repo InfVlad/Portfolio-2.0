@@ -2,6 +2,7 @@ import { useRef } from "preact/hooks";
 import { useIntersection } from "~/hooks/useIntersection";
 import { useAnimatedValue } from "~/hooks/useAnimatedValue";
 import { skillsList } from "~/data/skillsList";
+import { Text } from "../../primitives";
 
 export const SkillsSlider = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +27,7 @@ export const SkillsSlider = () => {
       >
         {skillsList.map(({ title, image }, index) => (
           <div
-            className="item"
+            className="item flex flex-col items-center justify-between"
             style={{
               "--position": index,
               "--translateZ": `${translateZ}px`,
@@ -36,10 +37,11 @@ export const SkillsSlider = () => {
             <img
               src={image}
               alt={title}
-              height={80}
-              width={80}
+              height={75}
+              width={75}
               loading="lazy"
             />
+            <Text className="font-semibold">{title}</Text>
           </div>
         ))}
       </div>
