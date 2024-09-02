@@ -7,7 +7,7 @@ import { Text } from "~/components/primitives/text/Text";
 
 <Layout title="Contact me">
   <main class="container pb-14 pt-32">
-    <div class="mb-12">
+    <div class="autoShowRight2WithoutTimeline mb-12 opacity-0">
       <Text element="h1" className="pb-6 text-5xl font-semibold"
         >Let's Connect!</Text
       >
@@ -18,7 +18,12 @@ import { Text } from "~/components/primitives/text/Text";
         reality.</Text
       >
     </div>
-    <section class="flex w-full gap-x-20">
+    <section
+      class="autoShowRight2WithoutTimeline flex w-full gap-x-20 opacity-0"
+      style={{
+        "--delay": "0.2s",
+      }}
+    >
       <ContactDetails />
       <ContactForm client:visible />
     </section>

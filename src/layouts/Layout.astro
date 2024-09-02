@@ -79,6 +79,12 @@ const { title } = Astro.props;
     animation-delay: var(--delay, 0s);
   }
 
+  /* This one doesn't use scale, just shows to the right, used in contact page */
+  .autoShowRight2WithoutTimeline {
+    animation: autoAnimateShowRight2 0.3s ease-in forwards;
+    animation-delay: var(--delay, 0s);
+  }
+
   .slider {
     position: absolute;
     width: 80px;
@@ -140,6 +146,16 @@ const { title } = Astro.props;
     to {
       opacity: 1;
       scale: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes autoAnimateShowRight2 {
+    from {
+      opacity: 0;
+      transform: translateX(-25px);
+    }
+    to {
+      opacity: 1;
       transform: translateY(0);
     }
   }
