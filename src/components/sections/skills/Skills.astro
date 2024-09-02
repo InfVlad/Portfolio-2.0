@@ -1,8 +1,17 @@
 ---
 import SectionLayout from "~/layouts/SectionLayout.astro";
+import { Text } from "../../primitives";
 import { SkillsSlider } from "~/components/composites/skills-slider/SkillsSlider";
 ---
 
-<SectionLayout title="Skills" link="#">
+<SectionLayout title="Skills" link="#" withMargin={false}>
+  <Text
+    element="p"
+    className="autoShow pb-12 pt-7 text-xl font-medium leading-none"
+  >
+    This is the set of technologies I use to create <span
+      class="text-primary-blue">efficient</span
+    > and <span class="text-secondary-blue">modern web applications:</span>
+  </Text>
   <SkillsSlider client:visible />
 </SectionLayout>
