@@ -3,6 +3,7 @@ import { Github, Linkedin } from "lucide-preact";
 import { LinesCanvas } from "~/components/composites/lines-canvas/LinesCanvas";
 import { AnimatedButtonContainer } from "~/components/composites/animated-button-container/AnimatedButtonContainer";
 import { AnimatedBoxLink, PulsatingDot, Text } from "~/components/primitives";
+import { GITHUB, LINKEDIN } from "~/data/socialsLinks";
 ---
 
 <section
@@ -31,14 +32,14 @@ import { AnimatedBoxLink, PulsatingDot, Text } from "~/components/primitives";
     <AnimatedBoxLink
       title="Go to Github"
       label="Checkout the github page for more information"
-      link="https://github.com/InfVlad"
+      link={GITHUB}
     >
       <Github class="h-6 w-6" />
     </AnimatedBoxLink>
     <AnimatedBoxLink
       title="Go to Linkedin"
       label="Checkout the linkedin profile for more information"
-      link="https://www.linkedin.com/in/vladimir-infante-347058263/"
+      link={LINKEDIN}
     >
       <Linkedin class="h-5 w-5" />
     </AnimatedBoxLink>
