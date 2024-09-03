@@ -20,7 +20,7 @@ export const FormInput = ({
   ...inputProps
 }: Props) => {
   const [focused, setFocused] = useState(false);
-  const handleFocus = (e: JSX.TargetedFocusEvent<HTMLInputElement>) => {
+  const handleFocus = () => {
     setFocused(true);
   };
   return (
