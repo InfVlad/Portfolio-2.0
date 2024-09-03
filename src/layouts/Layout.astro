@@ -199,4 +199,14 @@ const { title } = Astro.props;
       stroke-dashoffset: 0;
     }
   }
+
+  .animate-toast {
+    animation: showToast 0.3s ease forwards;
+  }
+  @keyframes showToast {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 </style>
