@@ -23,7 +23,7 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      showToast("An error occured", false, {});
+      showToast("An error occured", false);
     }, 400);
   };
 
