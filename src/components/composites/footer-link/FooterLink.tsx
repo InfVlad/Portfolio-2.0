@@ -2,11 +2,7 @@ import type { HTMLAttributes } from "preact/compat";
 
 interface FooterLinkProps extends HTMLAttributes<HTMLAnchorElement> {}
 
-export const FooterLink = ({
-  children,
-  className,
-  ...anchorProps
-}: FooterLinkProps) => {
+export const FooterLink = ({ children, ...anchorProps }: FooterLinkProps) => {
   return (
     <li>
       <a
