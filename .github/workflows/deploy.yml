@@ -23,10 +23,16 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            set -e
+            echo "Setting PATH"
             export PATH=$PATH:/home/${{ secrets.USERNAME }}/.bun/bin
             source ~/.bashrc
             cd /var/www/portfolio.vladinfante.com/src/
+            echo "Pulling latest code"
             git pull origin main
+            echo "Installing dependencies"
             bun install
+            echo "Building project"
             bun run build
+            echo "Copying build artifacts"
             cp -r dist/. ../dist/
