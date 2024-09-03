@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "build:prod": "astro check --minimumSeverity warning && astro build",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
