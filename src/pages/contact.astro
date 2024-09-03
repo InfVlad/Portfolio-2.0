@@ -2,7 +2,7 @@
 import Layout from "~/layouts/Layout.astro";
 import { ContactForm } from "~/components/composites/contact-form/ContactForm";
 import ContactDetails from "~/components/composites/contact-details/ContactDetails.astro";
-import { Text } from "~/components/primitives/text/Text";
+import { Text, Spinner } from "~/components/primitives";
 ---
 
 <Layout title="Contact me">
@@ -25,7 +25,9 @@ import { Text } from "~/components/primitives/text/Text";
       }}
     >
       <ContactDetails />
-      <ContactForm client:visible />
+      <ContactForm client:visible>
+        <Spinner className="h-5 w-5" />
+      </ContactForm>
     </section>
   </main>
 </Layout>
