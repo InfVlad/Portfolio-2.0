@@ -1,10 +1,10 @@
-import type { HTMLAttributes } from "preact/compat";
+import type { InputHTMLAttributes } from "preact/compat";
 
 export type InputsList = "name" | "subject" | "message" | "email";
 
 export interface InputData
   extends Pick<
-    HTMLAttributes<HTMLInputElement>,
+    InputHTMLAttributes<HTMLInputElement>,
     "id" | "placeholder" | "pattern" | "required" | "type"
   > {
   name: InputsList;
