@@ -6,9 +6,11 @@ export default {
       colors: {
         "primary-bg": "#0E100F",
         "primary-lila": "#A98AFF",
-        "primary-blue": "#17d1f1",
+        "primary-blue": "#17D1F1",
         "secondary-blue": "#18A0FB",
-        bline: "rgb(50 50 40)",
+        "primary-text": "#FFFFE3",
+        "secondary-text": "#D1D1D1",
+        bline: "#323228",
         card: "#191917",
       },
       dropShadow: {
