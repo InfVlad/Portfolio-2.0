@@ -48,10 +48,10 @@ export const skillsList: Skill[] = [
     title: "NodeJs",
     image: NodeJs.src,
   },
-  {
-    title: "tRPC",
-    image: tRPC.src,
-  },
+  // {
+  //   title: "tRPC",
+  //   image: tRPC.src,
+  // },
   {
     title: "Prisma",
     image: Prisma.src,

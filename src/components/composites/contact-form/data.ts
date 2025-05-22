@@ -35,7 +35,7 @@ export const inputsData: InputData[] = [
     id: "4",
     name: "message",
     type: "text",
-    placeholder: "Enter your subject...",
+    placeholder: "Enter your message...",
     errorMessage: "The message should be at least 5 characters",
     label: "Message",
     pattern: ".{5,250}",

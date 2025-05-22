@@ -23,7 +23,7 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      showToast("An error occured", false);
+      showToast("An error occurred", false);
     }, 400);
   };
 
@@ -57,11 +57,9 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
           />
         ))}
       </fieldset>
-      <button type="submit">
-        <AnimatedButtonContainer isLink={false} className="px-12">
-          {isLoading ? children : "Submit"}
-        </AnimatedButtonContainer>
-      </button>
+      <AnimatedButtonContainer isLink={false} type="submit" className="px-12">
+        {isLoading ? children : "Submit"}
+      </AnimatedButtonContainer>
       {message && <Toast message={message} isSuccess={isSuccess} />}
     </form>
   );

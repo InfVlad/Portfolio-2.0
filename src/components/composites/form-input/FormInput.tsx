@@ -1,9 +1,9 @@
 import { Input } from "../../primitives";
 import { useState } from "preact/hooks";
 import type { JSX } from "preact";
-import type { HTMLAttributes } from "preact/compat";
+import type { InputHTMLAttributes } from "preact/compat";
 
-interface Props extends HTMLAttributes<HTMLInputElement> {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string;
   errorMessage: string;

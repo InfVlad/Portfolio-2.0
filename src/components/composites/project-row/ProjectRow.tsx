@@ -1,7 +1,7 @@
 import { Text } from "../../primitives";
 import type { SimplifiedProject } from "~/types/projects";
 
-interface Props extends Omit<SimplifiedProject, "slug" | "description"> {
+interface Props extends Omit<SimplifiedProject, "description"> {
   handleMouseEnter: () => void;
   handleMouseLeave: () => void;
 }
@@ -10,14 +10,14 @@ export const ProjectRow = ({
   rol,
   technologies,
   title,
-  url,
+  slug,
   year,
   handleMouseEnter,
   handleMouseLeave,
 }: Props) => {
   return (
     <a
-      href={url}
+      href={`/projects#${slug}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="autoShow group flex w-full justify-between border-b border-b-bline px-24 py-12"

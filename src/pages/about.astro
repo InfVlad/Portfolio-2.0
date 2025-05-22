@@ -1,0 +1,45 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { Text } from "~/components/primitives";
+---
+
+<Layout title="Vladimir Infante Dev - About">
+  <main class="container pb-14 pt-32">
+    <div class="autoShowRight2WithoutTimeline mb-12 opacity-0">
+      <Text element="h1" className="pb-6 text-5xl font-semibold"
+        >Hello! I'm Vladimir 👋</Text
+      >
+    </div>
+    <section
+      class="slideBotToTopAnimation w-full space-y-6 opacity-0"
+      style={{
+        "--delay": "0.3s",
+      }}
+    >
+      <Text element="p" className="pb-6 text-xl">
+        I am a self-taught FullStack Developer from Venezuela who loves building
+        functional and user-friendly web applications. Over the years, I've
+        worked on everything from e-commerce platforms and custom dashboards to
+        AI-powered tools and e-learning platforms. I really enjoy solving
+        problems with tools like React, Next.js, TypeScript, and I'm equally
+        comfortable working on the backend with Node.js (Express.js),
+        PostgreSQL, Redis, Django and FastAPI.
+      </Text>
+      <Text element="p" className="pb-6 text-xl">
+        I enjoy diving into new technologies and experimenting with tools to
+        improve my skills and workflows. Whether it's optimizing API
+        performance, setting up CI/CD pipelines with GitHub Actions, or building
+        an intuitive frontend, I'm all about creating efficient and maintainable
+        solutions.
+      </Text>
+      <Text element="p" className="pb-6 text-xl">
+        When I'm not coding, I'm probably tweaking personal projects, exploring
+        new ways to solve problems, or enjoying hobbies like photography and
+        learning new languages.
+      </Text>
+      <Text element="p" className="pb-6 text-xl">
+        Let's build something awesome together!
+      </Text>
+    </section>
+  </main>
+</Layout>

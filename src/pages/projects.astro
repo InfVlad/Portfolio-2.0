@@ -1,0 +1,44 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { Text } from "~/components/primitives";
+import ProjectCard from "~/components/composites/project-card/project-card.astro";
+import { simplifiedProjectList } from "~/data/projects";
+---
+
+<Layout title="Vladimir Infante Dev - Projects">
+  <main class="container pb-14 pt-32">
+    <div class="autoShowRight2WithoutTimeline mb-12 opacity-0">
+      <Text element="h1" className="pb-6 text-5xl font-semibold">Projects</Text>
+    </div>
+
+    <section class="mt-12 flex w-full flex-col gap-8 px-4">
+      {
+        simplifiedProjectList.map(
+          ({
+            title,
+            technologies,
+            year,
+            imageSrc,
+            bulletPoints,
+            imageAlt,
+            webUrl,
+            codeUrl,
+            slug,
+          }) => (
+            <ProjectCard
+              title={title}
+              technologies={technologies}
+              year={year}
+              imageSrc={imageSrc}
+              bulletPoints={bulletPoints}
+              imageAlt={imageAlt}
+              webUrl={webUrl}
+              codeUrl={codeUrl}
+              slug={slug}
+            />
+          )
+        )
+      }
+    </section>
+  </main>
+</Layout>
