@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { Text } from "~/components/primitives";
+import { AnimatedButtonContainer } from "../animated-button-container/AnimatedButtonContainer";
+
+interface Props {
+  title: string;
+  technologies: string;
+  year: string;
+  imageSrc: ImageMetadata;
+  imageAlt: string;
+  bulletPoints: string[];
+  caveat?: string;
+  webUrl?: string;
+  codeUrl?: string;
+  slug: string;
+}
+
+const {
+  title,
+  imageSrc,
+  technologies,
+  bulletPoints,
+  year,
+  imageAlt,
+  webUrl,
+  codeUrl,
+  caveat,
+  slug,
+} = Astro.props;
+---
+
+<article
+  class="slideBotToTopAnimation flex-grow rounded-lg border border-bline p-4 opacity-0"
+  style={{
+    "--delay": "0.3s",
+  }}
+  id={slug}
+>
+  <div
+    class="flex flex-col items-start justify-center gap-3 lg:flex-row lg:gap-8"
+  >
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      class="my-1 w-full max-w-[40.625rem] rounded-md object-cover"
+    />
+
+    <div class="w-full">
+      <div class="flex w-full items-center justify-between">
+        <div class="space-y-1">
+          <Text variant="heading">{title}</Text>
+          <Text variant="subtitle">{technologies}</Text>
+        </div>
+        <div>
+          <Text variant="subtitle"> {year} </Text>
+        </div>
+      </div>
+      <div class="mt-3 flex-grow border border-bline"></div>
+      <div class="mt-4 text-primary-text">
+        <ul class="ml-5 list-disc space-y-2">
+          {bulletPoints.map((content) => <li>{content}</li>)}
+        </ul>
+        <div class="flex w-full justify-center gap-x-6 pt-5">
+          <AnimatedButtonContainer
+            isLink
+            href={webUrl}
+            target="_blank"
+            title={`Go to ${title}`}
+            className="mb-0 px-12"
+          >
+            Visit
+          </AnimatedButtonContainer>
+          {
+            codeUrl && (
+              <AnimatedButtonContainer
+                isLink
+                href={codeUrl}
+                target="_blank"
+                title={`Check on Github`}
+                className="mb-0 px-12"
+              >
+                Code
+              </AnimatedButtonContainer>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
