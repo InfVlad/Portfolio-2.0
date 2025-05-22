@@ -35,12 +35,14 @@ export const Navbar = () => {
             About
           </NavbarLink>
         </ul>
-        <a href="/contact" className="h-[3.125rem] w-fit rounded-3xl">
-          <AnimatedButtonContainer isLink={false} className="mb-0">
-            <Mail size={20} />
-            Contact
-          </AnimatedButtonContainer>
-        </a>
+        <AnimatedButtonContainer
+          isLink
+          href="/contact"
+          className="mb-0 h-[3.125rem] w-fit rounded-3xl"
+        >
+          <Mail size={20} />
+          Contact
+        </AnimatedButtonContainer>
       </nav>
     </header>
   );
