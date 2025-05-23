@@ -1,6 +1,6 @@
-import type { HTMLAttributes } from "preact/compat";
+import type { AnchorHTMLAttributes } from "preact/compat";
 
-interface FooterLinkProps extends HTMLAttributes<HTMLAnchorElement> {}
+interface FooterLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 export const FooterLink = ({ children, ...anchorProps }: FooterLinkProps) => {
   return (

@@ -42,7 +42,7 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-[25rem] rounded-md border border-bline bg-card p-8 xl:max-w-[40rem]"
+      className="mx-auto w-full min-w-[22.5rem] max-w-[30rem] rounded-md border border-bline bg-card p-8 xl:max-w-[40rem]"
     >
       <legend className="mb-8 text-2xl font-bold text-white">
         Contact Form

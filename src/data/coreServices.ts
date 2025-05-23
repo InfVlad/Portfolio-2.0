@@ -9,9 +9,9 @@ export const services: CoreService[] = [
     Icon: MonitorCog,
   },
   {
-    title: "REST APIs & tRPC",
+    title: "REST APIs & GraphQL",
     description:
-      "Building and integrating REST APIs and tRPC for efficient backend communication.",
+      "Building and integrating REST APIs and GraphQL for efficient backend communication.",
     Icon: Network,
   },
   {

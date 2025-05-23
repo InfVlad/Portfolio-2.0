@@ -16,32 +16,34 @@ export const Navbar = () => {
       )}
     >
       <nav className="container flex w-[95%] items-center justify-between py-2">
-        <div className="w-[7.8125rem]">
+        <div className="w-[3rem] md:w-[7.8125rem]">
           <a href="/">
             <img src="/favicon.svg" alt="site's icon" height={25} width={47} />
           </a>
         </div>
-        <ul className="flex h-[3.125rem] items-center justify-center gap-x-4 rounded-3xl border border-bline px-4 font-semibold text-white">
-          <NavbarLink href="/">
+        <ul className="flex h-[3.125rem] items-center justify-center gap-x-8 rounded-3xl border border-bline px-4 font-semibold text-white md:gap-x-4">
+          <NavbarLink href="/" title="Home">
             <House size={20} />
-            Home
+            <span className="hidden md:block">Home</span>
           </NavbarLink>
-          <NavbarLink href="/projects">
+          <NavbarLink href="/projects" title="Projects">
             <Briefcase size={20} />
-            Projects
+
+            <span className="hidden md:block">Projects</span>
           </NavbarLink>
-          <NavbarLink href="/about">
+          <NavbarLink href="/about" title="About">
             <User size={20} />
-            About
+            <span className="hidden md:block">About</span>
           </NavbarLink>
         </ul>
         <AnimatedButtonContainer
           isLink
           href="/contact"
           className="mb-0 h-[3.125rem] w-fit rounded-3xl"
+          title="Contact"
         >
           <Mail size={20} />
-          Contact
+          <span className="hidden md:block">Contact</span>
         </AnimatedButtonContainer>
       </nav>
     </header>

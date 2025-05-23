@@ -17,7 +17,7 @@ export const CoreServiceCard = ({
   return (
     <article
       className={cn(
-        "flex h-[21.875rem] flex-1 flex-col rounded-md border border-bline bg-card p-10 pl-6 pt-36 opacity-0 transition-opacity duration-300",
+        "flex h-[21.875rem] min-w-[18rem] max-w-[19rem] flex-1 flex-col rounded-md border border-bline bg-card p-10 pl-6 pt-36 opacity-0 transition-opacity duration-300",
         index % 2 === 1 ? "text-primary-lila" : "text-primary-blue",
         isVisible && "autoShowRightWithoutTimeline",
       )}

@@ -8,19 +8,27 @@ import { GITHUB, LINKEDIN } from "~/data/socialsLinks";
 
 <section
   id="hero"
-  class="relative mt-[4.125rem] flex h-[calc(100vh-4.125rem)] w-full flex-col items-center justify-center border-b border-b-bline"
+  class="relative mt-[4.125rem] flex h-[calc(100vh-4.125rem)] w-full flex-col items-center justify-center border-b border-b-bline text-center"
 >
   <LinesCanvas client:idle />
-  <Text element="h1" variant="gradient" className="mb-1 text-6xl font-bold">
+  <Text
+    element="h1"
+    variant="gradient"
+    className="mb-5 text-5xl font-bold md:mb-1 md:text-6xl"
+  >
     Vladimir Infante
   </Text>
-  <Text element="h2" variant="base" className="mb-2 text-3xl font-semibold">
+  <Text
+    element="h2"
+    variant="base"
+    className="mb-3 text-2xl font-semibold md:mb-2 md:text-3xl"
+  >
     FullStack Developer
   </Text>
   <Text
     element="p"
     variant="base"
-    className="mb-5 text-lg font-semibold text-gray-200"
+    className="mb-5 text-base font-semibold text-gray-200 md:text-lg"
   >
     I build great digital experiences using modern technologies
   </Text>
