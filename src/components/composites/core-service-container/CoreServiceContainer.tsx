@@ -7,7 +7,10 @@ export const CoreServiceContainer = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIntersection(ref, "0px 0px -15% 0px");
   return (
-    <section ref={ref} class="autoShow flex flex-wrap gap-4">
+    <section
+      ref={ref}
+      class="autoShow flex w-full flex-wrap justify-evenly gap-4"
+    >
       {services.map((service, index) => (
         <CoreServiceCard {...service} isVisible={isVisible} index={index} />
       ))}
