@@ -13,12 +13,12 @@ export const Footer = () => {
     <footer className="container pb-4">
       <div
         ref={ref}
-        className="flex w-full rounded-xl border border-bline px-3 pb-10 pt-12 md:px-16 xl:gap-36"
+        className="flex w-full rounded-xl border border-bline px-9 pb-10 pt-12 md:px-16 xl:gap-36"
       >
-        <div className="flex w-full justify-between">
+        <div className="flex w-full flex-wrap justify-between gap-x-3 gap-y-6">
           <div
             className={cn(
-              "opacity-0",
+              "min-w-[10rem] opacity-0",
               isVisible && "autoShowRightWithoutTimeline",
             )}
             style={{
@@ -34,7 +34,7 @@ export const Footer = () => {
           </div>
           <ul
             className={cn(
-              "space-y-1 text-lg text-white opacity-0",
+              "min-w-[5rem] space-y-1 text-lg text-white opacity-0",
               isVisible && "autoShowRightWithoutTimeline",
             )}
             style={{
@@ -50,7 +50,7 @@ export const Footer = () => {
           </ul>
           <ul
             className={cn(
-              "space-y-1 text-lg text-white opacity-0",
+              "min-w-[7.5rem] space-y-1 text-lg text-white opacity-0",
               isVisible && "autoShowRightWithoutTimeline",
             )}
             style={{
@@ -68,7 +68,7 @@ export const Footer = () => {
           </ul>
           <div
             className={cn(
-              "opacity-0",
+              "min-w-[9.375rem] opacity-0",
               isVisible && "autoShowRightWithoutTimeline",
             )}
             style={{
@@ -80,6 +80,7 @@ export const Footer = () => {
               title="Contact Me"
               subtitle="Say Hello !"
               href="/contact"
+              className="pt-0 md:pt-4"
             />
             <AnimatedFooterLink
               title="My Projects"
@@ -97,7 +98,7 @@ export const Footer = () => {
             href="https://github.com/InfVlad/Portfolio-2.0"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary-blue duration-300 hover:text-primary-blue"
+            className="text-primary-blue duration-300 hover:text-secondary-blue"
           >
             here.
           </a>

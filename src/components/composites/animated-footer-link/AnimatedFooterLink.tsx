@@ -7,6 +7,7 @@ type Props = {
   subtitle: string;
   href: string;
   withBorder?: boolean;
+  className?: string;
 };
 
 export const AnimatedFooterLink = ({
@@ -14,6 +15,7 @@ export const AnimatedFooterLink = ({
   subtitle,
   href,
   withBorder,
+  className,
 }: Props) => {
   return (
     <a
@@ -21,6 +23,7 @@ export const AnimatedFooterLink = ({
       className={cn(
         "group flex gap-2 py-4",
         withBorder && "border-b border-bline",
+        className,
       )}
     >
       <div>
