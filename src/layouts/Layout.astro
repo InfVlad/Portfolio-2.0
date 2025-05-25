@@ -12,25 +12,47 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- SEO meta tags -->
+    <title>{title}</title>
     <meta
       name="description"
-      content="Vladimir Infante Fullstack Developer with +3 years of experience working with React.js"
+      content="Full-Stack Developer with +3 years of experience working with React.js"
     />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Vladimir Infante" />
+    <meta
+      name="keywords"
+      content="Vladimir Infante, developer, full-stack, front-end, front end, front-end, react.js, typescript"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+
+    <meta property="og:title" content="Vladimir Infante Portfolio" />
+    <meta
+      name="og:description"
+      content="Full-Stack Developer with +3 years of experience working with React.js"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio.vladinfante.com/" />
+    <meta property="og:site_name" content="Vladimir Infante Portfolio" />
+    <meta
+      property="og:image"
+      content="https://portfolio.vladinfante.com/og-image.png"
+    />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Analytics -->
     <script
       defer
       data-domain="portfolio.vladinfante.com"
       src="https://plausible.vladinfante.com/js/script.js"></script>
-    <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="Vladimir Infante Fullstack Developer" />
-    <meta property="og:type" content="website" />
-    <meta
-      name="og:description"
-      content="Vladimir Infante Fullstack Developer with +3 years of experience working with React.js"
-    />
-    <title>{title}</title>
   </head>
   <body class="bg-primary-bg">
     <Navbar client:load />
