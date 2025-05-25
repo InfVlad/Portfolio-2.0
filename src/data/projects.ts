@@ -6,7 +6,7 @@ import garageGuest from "~/assets/images/garage-guest.png";
 export const simplifiedProjectList: SimplifiedProject[] = [
   {
     slug: "tuyo-closet-sale",
-    rol: "Backend Development",
+    rol: "Back-End Development",
     technologies: "Django, Postgresql, Redis, REST API, Swagger",
     title: "Tuyo Closet Sale",
     webUrl:
@@ -14,7 +14,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
     year: "2024",
     description: "E-commerce Platform",
     bulletPoints: [
-      "Developed the backend for an eCommerce React Native application tailored for influencers, using Django and PostgreSQL.",
+      "Developed the back-end for an eCommerce React Native application tailored for influencers, using Django and PostgreSQL.",
       "Designed and implemented the database schema, ensuring scalability and optimized data relationships.",
       "Utilized Redis for caching, improving API response times and overall performance.",
       "Configured the Linux VPS environment, including the setup of NGINX as a reverse proxy, Uvicorn application server, and DNS configurations.",
@@ -28,7 +28,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
   },
   {
     slug: "garage-guest",
-    rol: "Fullstack Development",
+    rol: "Full-Stack Development",
     technologies: "Next.js, Tailwind CSS, TypeScript, Prisma ORM, Postgresql",
     title: "Garage Guest",
     webUrl: "https://garage-guest-c14.vercel.app/",

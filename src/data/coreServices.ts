@@ -3,7 +3,7 @@ import type { CoreService } from "~/types/coreService";
 
 export const services: CoreService[] = [
   {
-    title: "FullStack Development",
+    title: "Full-Stack Development",
     description:
       "Crafting robust applications, ensuring optimized and maintainable code.",
     Icon: MonitorCog,
@@ -11,7 +11,7 @@ export const services: CoreService[] = [
   {
     title: "REST APIs & GraphQL",
     description:
-      "Building and integrating REST APIs and GraphQL for efficient backend communication.",
+      "Building and integrating REST APIs and GraphQL for efficient back-end communication.",
     Icon: Network,
   },
   {
