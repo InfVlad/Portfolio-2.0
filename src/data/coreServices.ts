@@ -3,7 +3,7 @@ import type { CoreService } from "~/types/coreService";
 
 export const services: CoreService[] = [
   {
-    title: "Full-Stack Development",
+    title: "Fullstack Development",
     description:
       "Crafting robust applications, ensuring optimized and maintainable code.",
     Icon: MonitorCog,
