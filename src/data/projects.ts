@@ -28,7 +28,7 @@ export const simplifiedProjectList: SimplifiedProject[] = [
   },
   {
     slug: "garage-guest",
-    rol: "Full-Stack Development",
+    rol: "Fullstack Development",
     technologies: "Next.js, Tailwind CSS, TypeScript, Prisma ORM, Postgresql",
     title: "Garage Guest",
     webUrl: "https://garage-guest-c14.vercel.app/",
