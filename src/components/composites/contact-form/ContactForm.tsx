@@ -7,9 +7,10 @@ import { AnimatedButtonContainer } from "../animated-button-container/AnimatedBu
 import { inputsData } from "./data";
 import { useToast } from "~/hooks/useToast";
 import type { InputsList } from "./types";
+import { emailSender } from "~/utils/email-sender";
 
 export const ContactForm = ({ children }: { children: ComponentChildren }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [values, setValues] = useState<Record<InputsList, string>>({
     name: "",
     email: "",
@@ -18,13 +19,19 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
   });
   const { showToast, message, isSuccess } = useToast();
 
-  const handleSubmit = (e: JSX.TargetedSubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: JSX.TargetedSubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      showToast("An error occurred", false);
-    }, 400);
+    setIsSubmitting(true);
+
+    const result = await emailSender(values);
+
+    if (result.success) {
+      showToast("Message sent successfully", true);
+    } else {
+      showToast("An error occurred while sending the message", false);
+    }
+
+    setIsSubmitting(false);
   };
 
   const onChange = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
@@ -57,8 +64,13 @@ export const ContactForm = ({ children }: { children: ComponentChildren }) => {
           />
         ))}
       </fieldset>
-      <AnimatedButtonContainer isLink={false} type="submit" className="px-12">
-        {isLoading ? children : "Submit"}
+      <AnimatedButtonContainer
+        isLink={false}
+        type="submit"
+        className="px-12"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? children : "Submit"}
       </AnimatedButtonContainer>
       {message && <Toast message={message} isSuccess={isSuccess} />}
     </form>
